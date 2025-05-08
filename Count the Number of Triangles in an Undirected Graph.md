@@ -22,10 +22,36 @@ Also, initialize a matrix `aux3` to store the cube of the adjacency matrix (i.e.
 ## PYTHON PROGRAM
 
 ```
+#Reg.NO-212223060119
+#Name-Kavindra T G
+
+import numpy as np
+
+def count_triangles(graph):
+    adj_matrix = np.array(graph)
+
+    aux2 = np.matmul(adj_matrix, adj_matrix)
+    aux3 = np.matmul(aux2, adj_matrix)
+
+    trace = np.trace(aux3)
+    triangle_count = trace // 6
+
+    return triangle_count
+
+graph = [
+    [0, 1, 1, 0],
+    [1, 0, 1, 1],
+    [1, 1, 0, 1],
+    [0, 1, 1, 0]
+]
+
+print("Number of triangles:", count_triangles(graph))
+
 ```
 
 ## OUTPUT
-```
-```
+![image](https://github.com/user-attachments/assets/ba299e7d-3971-492f-80ca-f799427a1307)
+
 
 ## RESULT
+Thus, the python function to accept a string, identify a word to be replaced, and replace it with a new word provided by the user has been executed and verified successfully.
